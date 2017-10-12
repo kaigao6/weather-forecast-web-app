@@ -1,0 +1,172 @@
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Droid Sans', Arial, sans-serif;
+}
+/*************************** 
+DEFAULTS - MOBILE FIRST 
+***************************/
+h1{
+    font: bold 2.5rem 'Droid Serif', Arial, sans-serif;
+    background-color: #097054;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+p{
+    font: bold 1.5rem 'Droid Sans', Arial, sans-serif;
+}
+
+i{
+    padding-bottom: 0.5rem;
+    padding-top: 0.8rem;
+    padding-left: 0.3rem;
+    font: bold 2rem 'Droid Sans', Arial, sans-serif;
+}
+
+.hourlyTemperature{
+    font: bold 1.8rem 'Droid Sans', Arial, sans-serif;
+}
+
+
+div [class*="clear"] {
+background-color: gold;
+}
+	
+div [class*="cloudy"] {
+	background-color:grey;
+}
+div [class*="partly-cloudy"] {
+		background-color: grey;
+}
+
+div [ class*="rain"] {
+	background-color: #6599FF;
+}
+/***************************
+    LAYOUT - MOBILE FIRST
+***************************/
+.wrapper{
+    width: 95%;
+    margin: 0 auto;
+    
+}
+
+.divEachHour{
+/*     clear:both;*/
+    width: 100%; 
+}
+
+.col{
+    width: 50%;
+    float: left;
+}
+
+.wi{
+    width: 100%;
+}
+
+
+.weather-forecast .divEachHour:nth-child(odd) {
+    display: none;
+}
+
+.weather-forecast .divEachHour:nth-child(even) {
+   display: none;
+}
+.weather-forecast .divEachHour:nth-child(6n+1) {
+    display: block;
+}
+
+
+/***************************
+    LAYOUT - Medium screen 600~1000px
+***************************/
+
+@media screen and (min-width:600px){
+    .weather-forecast .divEachHour:nth-child(odd) {
+    display: none;
+}
+
+.weather-forecast .divEachHour:nth-child(even) {
+   display: none;
+}
+.weather-forecast .divEachHour:nth-child(4n+1) {
+    display: block;
+}
+
+.wrapper{
+     width: 100%;
+    
+ }
+  
+.divEachHour{
+    min-height: 20rem;
+    float: left;
+    width: 16.4%;
+    border-right: 1px solid black;
+/*        border: 1px solid black;*/
+/*    border: 1px solid #097054;*/      
+    }
+
+    
+.col{
+    width: 100%;
+    clear: both;
+}
+    p,i{
+        text-align: center;
+    }
+    
+i{
+     padding: 0;
+    padding-bottom: 2rem;
+}
+    
+}
+@media screen and (min-width: 1000px){
+    
+        .weather-forecast .divEachHour:nth-child(odd) {
+    display: none;
+}
+
+.weather-forecast .divEachHour:nth-child(even) {
+   display: none;
+}
+.weather-forecast .divEachHour:nth-child(3n+1) {
+    display: block;
+}
+    
+    .divEachHour{
+    min-height: 26rem;
+    float: left;
+    width: 12.36%;
+    border-right: 1px solid black;
+/*        border: 1px solid black;*/
+/*    border: 1px solid #097054;*/      
+    }
+    
+    h1{
+        font-size: 3.5rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+    i{
+        font-size: 2.5rem;
+    }
+    .hourlyTemperature{
+    font-size: 2.3rem ;
+}
+}
+
+
+
+
